@@ -22,3 +22,12 @@ archetypeArtifactId: maven-archetype-quickstart
   <maven.compiler.source>1.17</maven.compiler.source>
 </properties>
 ```
+- Compile el proyecto para validar que todo este bien.
+
+### AGREGAR ESQUELETO DEL PROYECTO
+
+Cree los siguientes paquetes dentro deedu.eci.cvds.tdd
+- biblioteca
+  - libro
+  - préstamo
+  - usuario
