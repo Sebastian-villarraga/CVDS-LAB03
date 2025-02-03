@@ -42,3 +42,10 @@ En el paquete edu.eci.cvds.tdd.library.book cree la siguiente clase:
 
 ![image](https://github.com/user-attachments/assets/8256bde4-cc58-47ba-ab93-4df315e6b83f)
 
+Para validar que la estructura del proyecto está bien se debe compilar usando el comando package.
+
+![image](https://github.com/user-attachments/assets/0fc3f8f6-8e46-4211-a4d2-51a26bf7005b)
+![image](https://github.com/user-attachments/assets/586dee0e-18b4-4187-8344-9e3a428e20c3)
+
+
+
