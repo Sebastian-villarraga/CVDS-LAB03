@@ -16,3 +16,8 @@ archetypeArtifactId: maven-archetype-quickstart
 - Buscar en maven central la dependencia de JUnit5 en su versión más reciente.
 - Edite el archivo pom.xml del proyecto para agregar la dependencia.
 - Verifique que la versión de java sea la 17
+
+<properties>
+  <maven.compiler.target>1.17</maven.compiler.target>
+  <maven.compiler.source>1.17</maven.compiler.source>
+</properties>
