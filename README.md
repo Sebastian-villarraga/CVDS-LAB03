@@ -35,3 +35,5 @@ Cree los siguientes paquetes dentro deedu.eci.cvds.tdd
 ![image](https://github.com/user-attachments/assets/2169c6fb-888a-45f7-9e01-8fe4360ae02c)
 
 ### AGREGAR CLASES
+
+En el paquete edu.eci.cvds.tdd.library.book cree la siguiente clase:
