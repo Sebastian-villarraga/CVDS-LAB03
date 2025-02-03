@@ -34,6 +34,11 @@ Cree los siguientes paquetes dentro deedu.eci.cvds.tdd
   
 ![image](https://github.com/user-attachments/assets/2169c6fb-888a-45f7-9e01-8fe4360ae02c)
 
+Estos paquetes también se deben crear en la carpeta de test.
+
 ### AGREGAR CLASES
 
 En el paquete edu.eci.cvds.tdd.library.book cree la siguiente clase:
+
+![image](https://github.com/user-attachments/assets/8256bde4-cc58-47ba-ab93-4df315e6b83f)
+
