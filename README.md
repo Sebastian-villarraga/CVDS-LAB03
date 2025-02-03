@@ -57,6 +57,8 @@ Es necesario crear la clase de prueba para edu.eci.cvds.tdd.Library, la clase de
 
 Para pensar en los casos de pruebas lean detenidamente el javadoc de los métodos para reconocer las clases de equivalencia, basados en las clases de equivalencia se debe crear una prueba la cual debe fallar y posteriormente implementar el código necesario para que funcione, este proceso se debe repetir hasta cumplir con la especificación definida en el javadoc.
 
+![image](https://github.com/user-attachments/assets/7274d3cc-b86d-4cfd-9ad0-c13efc72a1fd)
+
 ### COBETURA
 
 Para usar Jacoco es necesario agregar la siguiente sección en el pom.xml
