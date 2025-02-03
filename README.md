@@ -1,6 +1,7 @@
 # CVDS-LAB03
 
-##CREAR PROYECTO CON MAVEN
+## CREAR PROYECTO CON MAVEN
+
 Deben crear un proyecto maven con los siguientes parámetros:
 
 Grupo: edu.eci.cvds 
