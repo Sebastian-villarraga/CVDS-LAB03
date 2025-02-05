@@ -82,4 +82,14 @@ public class LibraryTest {
         assertNotNull(library.loanABook("002", "12345"));
     }
 
+    @Test
+    public void testReturnLoanMethodIfTheLoanNotExists() {
+        assertNull(library.returnLoan(null));
+    }
+
+    @Test
+    public void testReturnLoanMethodIfTheLoanExists() {
+        Loan loan1 = library.loanABook("002", "12345");
+        assertNotNull(library.returnLoan(loan1));
+    }
 }

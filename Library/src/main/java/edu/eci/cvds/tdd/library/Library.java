@@ -99,6 +99,16 @@ public class Library {
      * @return the loan with the RETURNED status.
      */
     public Loan returnLoan(Loan ActualLoan) {
+        //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
+        for (Loan loan : loans) {
+            if (loan == ActualLoan) {
+                selectedBook = loan.getBook();
+                addBook(selectedBook);
+                ActualLoan.setStatus(LoanStatus.RETURNED);
+                ActualLoan.setReturnDate(LocalDateTime.now());
+                return ActualLoan;
+            }
+        }
         return null;
     }
 
