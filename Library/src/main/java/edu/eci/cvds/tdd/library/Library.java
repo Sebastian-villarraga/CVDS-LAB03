@@ -2,12 +2,14 @@ package edu.eci.cvds.tdd.library;
 
 import edu.eci.cvds.tdd.library.book.Book;
 import edu.eci.cvds.tdd.library.loan.Loan;
+import edu.eci.cvds.tdd.library.loan.LoanStatus;
 import edu.eci.cvds.tdd.library.user.User;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.time.LocalDateTime;
 
 /**
  * Library responsible for manage the loans and the users.
@@ -17,6 +19,9 @@ public class Library {
     private final List<User> users;
     private final Map<Book, Integer> books;
     private final List<Loan> loans;
+    private Book selectedBook;
+    private Loan newLoan;
+    private User borrower;
 
     public Library() {
         users = new ArrayList<>();
@@ -36,6 +41,13 @@ public class Library {
      */
     public boolean addBook(Book book) {
         //TODO Implement the logic to add a new book into the map.
+        if (books.containsKey(book)) {
+            int amount = books.get(book);
+            books.put(book, amount + 1);
+            return true;
+        } else {
+            books.put(book, 1);
+        }
         return false;
     }
 
@@ -54,7 +66,7 @@ public class Library {
      */
     public Loan loanABook(String userId, String isbn) {
         //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
-        return null;
+        return newLoan; // Returns the new loan
     }
 
     /**
@@ -62,17 +74,41 @@ public class Library {
      * in the loan list should be {@link edu.eci.cvds.tdd.library.loan.LoanStatus#RETURNED} and the loan return
      * date should be the current date, validate that the loan exist.
      *
-     * @param loan loan to return.
+     * @param ActualLoan loan to return.
      *
      * @return the loan with the RETURNED status.
      */
-    public Loan returnLoan(Loan loan) {
-        //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
+    public Loan returnLoan(Loan ActualLoan) {
         return null;
     }
 
-    public boolean addUser(User user) {
-        return users.add(user);
+    public  Map<Book, Integer> getBooks() {
+        return books;
     }
 
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public List<Loan> getLoans() {
+        return loans;
+    }
+
+    private User userByUserId(String userId) {
+        for (User u : users) {
+            if (u.getId().equals(userId)) {
+                return u;
+            }
+        }
+        return null;
+    }
+
+    private Book bookByIsbn(String isbn) {
+        for (Book b : books.keySet()) {
+            if (b.getIsbn().equals(isbn)) {
+                return b;
+            }
+        }
+        return null;
+    }
 }

@@ -1,5 +1,7 @@
 package edu.eci.cvds.tdd.library.book;
 
+import java.util.Objects;
+
 public class Book {
     private final String tittle;
     private final String author;
@@ -25,6 +27,16 @@ public class Book {
 
     @Override
     public boolean equals(Object obj) {
-        return isbn.equals(((Book)obj).isbn);
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Book book = (Book) obj;
+        return isbn.equals(book.isbn) &&
+                tittle.equals(book.tittle) &&
+                author.equals(book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(tittle, author, isbn); // Usar los mismos atributos
     }
 }

@@ -25,4 +25,40 @@ public class BookTest {
         assertFalse(book1.equals(book2), "Los libros con diferentes ISBNs no deben ser iguales");
     }
 
+    @Test
+    public void testGetTitleMethod() {
+        Book book1 = new Book("Java Programming", "John Doe", "12345");
+        assertEquals(book1.getTittle(), "Java Programming");
+    }
+
+    @Test
+    public void testGetAuthorMethod() {
+        Book book1 = new Book("Java Programming", "John Doe", "12345");
+        assertEquals(book1.getAuthor(), "John Doe");
+    }
+
+    @Test
+    public void testGetISBNMethod() {
+        Book book1 = new Book("Java Programming", "John Doe", "12345");
+        assertEquals(book1.getIsbn(), "12345");
+    }
+
+    @Test
+    public void testEqualsNull() {
+        // Crear un libro
+        Book book = new Book("12345", "Java Programming", "John Doe");
+
+        // Comparar con null
+        assertFalse(book.equals(null), "El libro no debe ser igual a null.");
+    }
+
+    @Test
+    public void testEqualsDifferentClass() {
+        // Crear un libro
+        Book book = new Book("12345", "Java Programming", "John Doe");
+        String str = "Some String";  // Crear un objeto de una clase diferente
+
+        // Comparar con un objeto de clase diferente
+        assertFalse(book.equals(str), "El libro no debe ser igual a un objeto de otra clase.");
+    }
 }
