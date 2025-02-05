@@ -60,4 +60,26 @@ public class LibraryTest {
         library.addBook(book4);
         assertEquals(1, books.get(book4));
     }
+
+    @Test
+    public void testLoanABookMethodIfTheUserDoesntExists() {
+        assertNull(library.loanABook("003", "12345"));
+    }
+
+    @Test
+    public void testLoanABookMethodIfTheBookIsNotAvailable() {
+        assertNull(library.loanABook("002", "8"));
+    }
+
+    @Test
+    public void testLoanABookMethodIfTheUserHasAnActiveLoanForTheSameBook() {
+        library.loanABook("001", "12345");
+        assertNull(library.loanABook("001", "12345"));
+    }
+
+    @Test
+    public void testLoanABookMethodIfTheRequirementsAreCorrect() {
+        assertNotNull(library.loanABook("002", "12345"));
+    }
+
 }

@@ -66,6 +66,26 @@ public class Library {
      */
     public Loan loanABook(String userId, String isbn) {
         //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
+        borrower = userByUserId(userId);
+        selectedBook = bookByIsbn(isbn);
+        if (borrower == null || selectedBook == null) {
+            return null; // the user or book not exist
+        }
+        for (Loan loan : loans) {
+            if (loan.getUser().equals(borrower) && loan.getBook().equals(selectedBook) && loan.getStatus() == LoanStatus.ACTIVE) {
+                return null; // The user have an active loan for the same book
+            }
+        }
+        int amount = books.get(selectedBook);
+        if (amount <= 0) {
+            return null;
+        }
+        books.put(selectedBook, amount - 1);
+        newLoan = new Loan();
+        newLoan.setBook(selectedBook);
+        newLoan.setStatus(LoanStatus.ACTIVE);
+        newLoan.setLoanDate(LocalDateTime.now());
+        loans.add(newLoan);
         return newLoan; // Returns the new loan
     }
 
