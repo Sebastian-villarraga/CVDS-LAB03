@@ -11,7 +11,6 @@ public class BookTest {
         Book book1 = new Book("Java Programming", "John Doe", "12345");
         Book book2 = new Book("Java Programming", "John Doe", "12345");
 
-        // Verificar que ambos libros son iguales, ya que tienen el mismo ISBN
         assertTrue(book1.equals(book2), "Los libros con el mismo ISBN deben ser iguales");
     }
 
@@ -21,7 +20,6 @@ public class BookTest {
         Book book1 = new Book("Java Programming", "John Doe", "12345");
         Book book2 = new Book("Advanced Java", "Jane Smith", "67890");
 
-        // Verificar que los libros son diferentes, ya que tienen ISBNs diferentes
         assertFalse(book1.equals(book2), "Los libros con diferentes ISBNs no deben ser iguales");
     }
 
@@ -48,7 +46,6 @@ public class BookTest {
         // Crear un libro
         Book book = new Book("12345", "Java Programming", "John Doe");
 
-        // Comparar con null
         assertFalse(book.equals(null), "El libro no debe ser igual a null.");
     }
 
@@ -58,7 +55,6 @@ public class BookTest {
         Book book = new Book("12345", "Java Programming", "John Doe");
         String str = "Some String";  // Crear un objeto de una clase diferente
 
-        // Comparar con un objeto de clase diferente
         assertFalse(book.equals(str), "El libro no debe ser igual a un objeto de otra clase.");
     }
 }
