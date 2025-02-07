@@ -51,6 +51,12 @@ Para validar que la estructura del proyecto está bien se debe compilar usando e
 
 Para poder implementar los métodos addBook, loanABook y returnLoan de la clase Library vamos a aplicar la técnica de TDD, por cada caso de prueba se debe hacer un commit, cada commit debe tener la prueba nueva y la implementación para que la prueba del commit funcione. Las pruebas anteriormente implementadas deben continuar funcionando. Como están trabajando en parejas es necesario trabajar en ramas independientes y utilizar Pull Request para mezclar los cambios.
 
+![image](https://github.com/user-attachments/assets/0460035f-3dc3-40b1-807e-4101a9bfcac5)
+![image](https://github.com/user-attachments/assets/0b3de2f0-233c-4fe1-8627-9eabc83e673c)
+![image](https://github.com/user-attachments/assets/3515dd7f-c7a6-4408-83d3-12442d3da6d6)
+![image](https://github.com/user-attachments/assets/09dcff78-e383-4199-8b23-f18e30cb0581)
+
+
 ### CREAR CLASE DE PRUEBA
 
 Es necesario crear la clase de prueba para edu.eci.cvds.tdd.Library, la clase debe seguir los estándares de nombres estudiados en clase.
@@ -71,14 +77,52 @@ Ahora al compilar el proyecto en la carpeta target se debe crear una carpeta con
 Ahora es necesario hacer el análisis estático del código usando SonarQube, para lo cual necesitamos tener Docker.
 
 - Para lo cual se debe descargar la imagen de docker con el siguiente comando docker pull sonarqube
+
+![image](https://github.com/user-attachments/assets/3967eb55-1284-45f9-95fa-2b6b68a609be)
+
 - Ahora se debe arrancar el servicio de SonarQube con el siguiente comando docker run -d --name sonarqube -e - - - -------SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
 - Validar funcionamiento docker ps -a
+
+![image](https://github.com/user-attachments/assets/d56f9085-352e-4526-b226-57432afaadc6)
+  
 - Iniciar sesión en sonar localhost:9000 cambiar la clave por defecto usuario y contraseña es admin.
+
+Ingresamos al link 'http://localhost:9000' aca digitamos el usuario y contraseña 'admin', cambiamos la nueva contraseña y nos lleva a:
+![image](https://github.com/user-attachments/assets/6ece7830-fef3-4016-acdd-909db35d4189)
+
+  
 - Entrar a las opciones de la cuenta.
-- Account -> settings -> generate token.
+  - Account -> settings -> generate token.
+
+![image](https://github.com/user-attachments/assets/833ee373-04f9-4ebe-917c-85cb1089581c)
+![image](https://github.com/user-attachments/assets/5f840a7d-eaa6-4b04-938c-b59a1539abdb)
+![image](https://github.com/user-attachments/assets/0521027d-0a6a-47d4-8312-d92dfa731505)
+
+Este es el codigo arrojado por SonarCloud al generar el token:
+squ_9dcafe9b620c51a7eb40c145efdf1787c76291f9
+  
 - Una vez sonar este corriendo deben generar un token
 - Instale sonarLint en el IDE que este manejando.
+
+entramos a intelliJ y nos dirigimos a File > Settings > Plugins:
+![image](https://github.com/user-attachments/assets/c0fd5ded-22cb-45c2-a25b-8e178c1657cd)
+instalamos SonarQube for IDE:
+![image](https://github.com/user-attachments/assets/77d525e2-43cf-47b6-8315-eb583b2caa26)
+en la barra de abajo de intelliJ podemos ver como analiza cada codigo mostrando que tan bien escrito esta:
+![image](https://github.com/user-attachments/assets/4c05573e-7cbb-4705-870e-870b15e2e8d0)
+
+  
 - Añada el plugin de Sonar en el archivo pom del proyecto.
+
+mos dirigimos a files > settings > tools > SonarQube for IDE y ponemos la direccion del repositorio local para vincularlo al proyecto:
+![image](https://github.com/user-attachments/assets/c62ed46b-7f69-41fd-b118-29a4d2cc7ac7)
+
+
+- Añada las propiedades de SonarQube y Jacoco.
+
+  Propiedades de SonarQuebe: y  jacoco se encuentran en el pom
+
+
 
 
 
