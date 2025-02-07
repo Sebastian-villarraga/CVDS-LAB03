@@ -51,6 +51,12 @@ Para validar que la estructura del proyecto está bien se debe compilar usando e
 
 Para poder implementar los métodos addBook, loanABook y returnLoan de la clase Library vamos a aplicar la técnica de TDD, por cada caso de prueba se debe hacer un commit, cada commit debe tener la prueba nueva y la implementación para que la prueba del commit funcione. Las pruebas anteriormente implementadas deben continuar funcionando. Como están trabajando en parejas es necesario trabajar en ramas independientes y utilizar Pull Request para mezclar los cambios.
 
+![image](https://github.com/user-attachments/assets/0460035f-3dc3-40b1-807e-4101a9bfcac5)
+![image](https://github.com/user-attachments/assets/0b3de2f0-233c-4fe1-8627-9eabc83e673c)
+![image](https://github.com/user-attachments/assets/3515dd7f-c7a6-4408-83d3-12442d3da6d6)
+![image](https://github.com/user-attachments/assets/09dcff78-e383-4199-8b23-f18e30cb0581)
+
+
 ### CREAR CLASE DE PRUEBA
 
 Es necesario crear la clase de prueba para edu.eci.cvds.tdd.Library, la clase debe seguir los estándares de nombres estudiados en clase.
@@ -104,7 +110,7 @@ entramos a intelliJ y nos dirigimos a File > Settings > Plugins:
   
 - Añada el plugin de Sonar en el archivo pom del proyecto.
 
-
+- Añada las propiedades de SonarQube y Jacoco.
 
 
 
