@@ -97,10 +97,14 @@ squ_9dcafe9b620c51a7eb40c145efdf1787c76291f9
   
 - Una vez sonar este corriendo deben generar un token
 - Instale sonarLint en el IDE que este manejando.
+
+entramos a intelliJ y nos dirigimos a File > Settings > Plugins:
+![image](https://github.com/user-attachments/assets/c0fd5ded-22cb-45c2-a25b-8e178c1657cd)
+
+  
 - Añada el plugin de Sonar en el archivo pom del proyecto.
 
-![image](https://github.com/user-attachments/assets/c2218a4b-9eb7-4dfd-98b2-25517f6b4726)
-![image](https://github.com/user-attachments/assets/eeb385d2-b00f-489d-a33c-d33b63ce1402)
+
 
 
 
