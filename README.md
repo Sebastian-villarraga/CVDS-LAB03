@@ -106,11 +106,23 @@ squ_9dcafe9b620c51a7eb40c145efdf1787c76291f9
 
 entramos a intelliJ y nos dirigimos a File > Settings > Plugins:
 ![image](https://github.com/user-attachments/assets/c0fd5ded-22cb-45c2-a25b-8e178c1657cd)
+instalamos SonarQube for IDE:
+![image](https://github.com/user-attachments/assets/77d525e2-43cf-47b6-8315-eb583b2caa26)
+en la barra de abajo de intelliJ podemos ver como analiza cada codigo mostrando que tan bien escrito esta:
+![image](https://github.com/user-attachments/assets/4c05573e-7cbb-4705-870e-870b15e2e8d0)
 
   
 - Añada el plugin de Sonar en el archivo pom del proyecto.
 
+mos dirigimos a files > settings > tools > SonarQube for IDE y ponemos la direccion del repositorio local para vincularlo al proyecto:
+![image](https://github.com/user-attachments/assets/c62ed46b-7f69-41fd-b118-29a4d2cc7ac7)
+
+
 - Añada las propiedades de SonarQube y Jacoco.
+
+  Propiedades de SonarQuebe: y  jacoco se encuentran en el pom
+
+
 
 
 
