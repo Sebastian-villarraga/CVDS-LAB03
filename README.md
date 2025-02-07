@@ -71,11 +71,29 @@ Ahora al compilar el proyecto en la carpeta target se debe crear una carpeta con
 Ahora es necesario hacer el análisis estático del código usando SonarQube, para lo cual necesitamos tener Docker.
 
 - Para lo cual se debe descargar la imagen de docker con el siguiente comando docker pull sonarqube
+
+![image](https://github.com/user-attachments/assets/3967eb55-1284-45f9-95fa-2b6b68a609be)
+
 - Ahora se debe arrancar el servicio de SonarQube con el siguiente comando docker run -d --name sonarqube -e - - - -------SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
 - Validar funcionamiento docker ps -a
+
+![image](https://github.com/user-attachments/assets/d56f9085-352e-4526-b226-57432afaadc6)
+  
 - Iniciar sesión en sonar localhost:9000 cambiar la clave por defecto usuario y contraseña es admin.
+
+Ingresamos al link 'http://localhost:9000' aca digitamos el usuario y contraseña 'admin', cambiamos la nueva contraseña y nos lleva a:
+![image](https://github.com/user-attachments/assets/6ece7830-fef3-4016-acdd-909db35d4189)
+
+  
 - Entrar a las opciones de la cuenta.
-- Account -> settings -> generate token.
+  - Account -> settings -> generate token.
+
+![image](https://github.com/user-attachments/assets/a3e06b70-8f60-4719-86a5-c63a0339982f)
+
+Este es el codigo arrojado por SonarCloud al generar el token:
+8cbd64e26268d974d5ecc1c307c7cbe62c484056
+
+  
 - Una vez sonar este corriendo deben generar un token
 - Instale sonarLint en el IDE que este manejando.
 - Añada el plugin de Sonar en el archivo pom del proyecto.
