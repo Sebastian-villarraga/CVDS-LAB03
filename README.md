@@ -88,15 +88,19 @@ Ingresamos al link 'http://localhost:9000' aca digitamos el usuario y contraseñ
 - Entrar a las opciones de la cuenta.
   - Account -> settings -> generate token.
 
-![image](https://github.com/user-attachments/assets/a3e06b70-8f60-4719-86a5-c63a0339982f)
+![image](https://github.com/user-attachments/assets/833ee373-04f9-4ebe-917c-85cb1089581c)
+![image](https://github.com/user-attachments/assets/5f840a7d-eaa6-4b04-938c-b59a1539abdb)
+![image](https://github.com/user-attachments/assets/0521027d-0a6a-47d4-8312-d92dfa731505)
 
 Este es el codigo arrojado por SonarCloud al generar el token:
-8cbd64e26268d974d5ecc1c307c7cbe62c484056
-
+squ_9dcafe9b620c51a7eb40c145efdf1787c76291f9
   
 - Una vez sonar este corriendo deben generar un token
 - Instale sonarLint en el IDE que este manejando.
 - Añada el plugin de Sonar en el archivo pom del proyecto.
+
+![image](https://github.com/user-attachments/assets/c2218a4b-9eb7-4dfd-98b2-25517f6b4726)
+![image](https://github.com/user-attachments/assets/eeb385d2-b00f-489d-a33c-d33b63ce1402)
 
 
 
