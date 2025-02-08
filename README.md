@@ -1,10 +1,9 @@
+# CVDS-LAB03
+
 ## Integrantes
 - Sebastian Julian Villarraga
 - Andrés Jacobo Sepúlveda
-
-
-# CVDS-LAB03
-
+- 
 ### CREAR PROYECTO CON MAVEN
 
 Deben crear un proyecto maven con los siguientes parámetros:
