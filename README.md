@@ -1,3 +1,8 @@
+## Integrantes
+- Sebastian Julian Villarraga
+- Andrés Jacobo Sepúlveda
+
+
 # CVDS-LAB03
 
 ### CREAR PROYECTO CON MAVEN
