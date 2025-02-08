@@ -3,7 +3,7 @@
 ## Integrantes
 - Sebastian Julian Villarraga
 - Andrés Jacobo Sepúlveda
--  
+  
 ### CREAR PROYECTO CON MAVEN
 
 Deben crear un proyecto maven con los siguientes parámetros:
